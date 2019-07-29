@@ -1,0 +1,32 @@
+div.ui.segments.roadmapFloatShow {
+  position: absolute;
+  top: 2.45rem;
+  right: -15rem;
+  width: 15rem;
+  transition: right, background;
+  transition-duration: 1.5s;
+}
+
+div.ui.segments.roadmapFloatHide {
+  position: absolute;
+  right: 0rem;
+  transition: right, background;
+  transition-duration: 1.5s;
+}
+
+div.hide {
+  position: absolute;
+  right: 13.5rem;
+  transition: right, color, transform;
+  transition-duration: 1.5s;
+  color: grey;
+  transform: rotateY(180deg);
+}
+
+div.show {
+  position: absolute;
+  right: 0rem;
+  color: black;
+  transition: right, color, transform;
+  transition-duration: 1.5s;
+}

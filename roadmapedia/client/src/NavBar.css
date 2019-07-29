@@ -1,0 +1,70 @@
+div.item {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+a.item {
+
+}
+
+span.emailInputText {
+  color: red;
+  transition: bottom;
+  transition-duration: 1s;
+}
+
+span.emailInputTextMoved {
+  position: relative;
+  bottom: 2.5rem !important;
+  color: green;
+  transition: bottom;
+  transition-duration: 1s;
+}
+
+div#InputBox {
+}
+
+div.ui.modal.transition.visible.active {
+  max-width: 50%;
+}
+
+div.ui.stacked.segment {
+  margin-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
+}
+
+div.ui.message {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.ui.center.aligned.middle.grid {
+  background: #70e1f5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffd194,
+    #70e1f5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffd194,
+    #70e1f5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+button#loginButton {
+  color: white;
+  background: #870000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #190a05, #870000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #190a05,
+    #870000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

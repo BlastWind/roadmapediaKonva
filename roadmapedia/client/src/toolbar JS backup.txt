@@ -1,0 +1,118 @@
+import React, { Component } from "react";
+import Konva from "konva";
+
+import { Stage, Layer, Rect, Transformer, Circle } from "react-konva";
+//at start, two same rectangles at one place
+//at the end of drag, note the x and y of the dragged rectangle, append it to GraphicsMain
+//return the dragged rectangle to original
+var toolBarWidth = window.innerWidth * 0.2;
+var toolBarHeight = window.innerHeight * 0.2;
+
+export default class Toolbar extends Component {
+  state = {
+    isDragging: false,
+    x: toolBarWidth / 4,
+    y: toolBarHeight / 4
+  };
+  render() {
+    return (
+      <Layer
+        ref="layer"
+        height={window.innerHeight}
+        width={window.innerWidth * 0.15}
+      >
+        <Rect
+          width={window.innerWidth * 0.15}
+          height={window.innerHeight}
+          stroke="black"
+          strokeWidth=".5"
+        />
+        <Rect
+          x={this.state.x}
+          y={this.state.y}
+          width={toolBarWidth / 5}
+          height={toolBarWidth / 5}
+          stroke="black"
+          strokeWidth="1"
+        />
+        <Rect
+          ref="draggableRectangle"
+          x={this.state.x}
+          y={this.state.y}
+          width={toolBarWidth / 5}
+          height={toolBarWidth / 5}
+          stroke="black"
+          strokeWidth="1"
+          draggable
+          onDragStart={() => {}}
+          onDragEnd={e => {
+            if (e.target.x() > window.innerWidth * 0.15) {
+              //add the rectangle to parent
+              var name = "rectangle" + this.props.rectName;
+              var toSend = {
+                x: e.target.x(),
+                y: e.target.y(),
+                width: toolBarWidth / 5,
+                height: toolBarWidth / 5,
+                stroke: "black",
+                strokeWidth: "1",
+
+                name: name
+              };
+              this.props.appendToRectangles(toSend);
+            }
+
+            var rectangle = this.refs.draggableRectangle,
+              layer = this.refs.layer;
+            rectangle.position({ x: this.state.x, y: this.state.y });
+            layer.draw();
+          }}
+        />
+        <Circle
+          x={this.state.x}
+          y={this.state.y + (2 * toolBarWidth) / 5}
+          width={toolBarWidth / 5}
+          height={toolBarWidth / 5}
+          stroke="black"
+          strokeWidth="1"
+        />
+        <Circle
+          ref="draggableCircle"
+          x={this.state.x}
+          y={this.state.y + (2 * toolBarWidth) / 5}
+          width={toolBarWidth / 5}
+          height={toolBarWidth / 5}
+          stroke="black"
+          strokeWidth="1"
+          draggable
+          onDragStart={() => {}}
+          onDragEnd={e => {
+            if (e.target.x() > window.innerWidth * 0.15) {
+              //add the rectangle to parent
+              var name = "circle" + this.props.circleName;
+              var toSend = {
+                x: e.target.x(),
+                y: e.target.y(),
+                width: toolBarWidth / 5,
+                height: toolBarWidth / 5,
+                stroke: "black",
+                strokeWidth: "1",
+
+                name: name
+              };
+              this.props.appendToCircles(toSend);
+            }
+
+            var circle = this.refs.draggableCircle,
+              layer = this.refs.layer;
+            circle.position({
+              x: this.state.x,
+              y: this.state.y + (2 * toolBarWidth) / 5
+            });
+            layer.draw();
+          }}
+        />
+      </Layer>
+    );
+  }
+}
