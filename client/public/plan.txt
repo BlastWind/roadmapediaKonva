@@ -1,0 +1,79 @@
+All tasks:
+
+ - Create Tool (3 days) - 6/18 - 6/20 night:                                     Predicted time: 7 hrs
+   todo: connectors paste shows error bar
+   todo: transformer changes width/length/radius instead of scaleX (2 hr)
+   todo: overall look nice (3 hrs)
+   todo: pictures (2 hrs)
+
+ - User system (2 days):                                                         Predicted time: 10 hrs
+   - Profile has:
+     - name
+     - social medias
+     - profile picture
+     - short bio
+     - starred roadmaps
+     - created roadmaps
+
+ - Roadmap object design (2 day):                                                Predicted time: 10hrs
+   - exportable from create tool
+   - reopenable from the exported JSON file
+   - savable to database to user
+   - able to be starred by user
+   - has author, description, views, stars， category
+
+ -  Home page （2 day):                                                          Predicted time: 10 hrs
+   - Featured page (sorted by hottest in the last week）
+   - Best of All time (sorted by all time views)
+   - By Category (goes through database to find top 8 famous categories and displays count)
+   - Search
+
+ - Overall frontend (2 day):                                                     Predicted time: 10 hrs
+   - Make it look pretty and add effects
+
+ - Deployment (1 day):                                                           Predicted time: 3 hrs
+   - deploy, enjoy day
+
+
+TOGO: 51 HRS!
+
+
+
+
+
+
+
+
+
+6-25-2019: konva fillpattern image, connector smoothly, right accordion perfect, editing tool just good (Crtl Z for later )
+
+
+
+
+
+
+
+
+editing tool:
+ - able to resize elements (JS bin example)
+ - able to drag around elements and connect them using port (directed-graph-creator, d3 graph editor)
+ - able to click to add text in elements (bpmn io does this)
+ - able to add pictures in elements (learn it myself)
+ - able to add different elements (circle, rectangle) (learn it myself)
+
+
+
+6-11-2019 tasks:
+ - learn from D3 Drag Rectangle with drag handles            (done)
+ - learn from directed graph creator                         (not done)
+ - learn from JS bin example                                 (done)
+ - make a small tool to drag and drop elements from toolbar  (toolbar is not drag and drop yet)
+
+6-12-2019 plan:
+ - learn 3 hours of d3                                       (done)
+ - continue making toolbar with draggable elements           (actually got the basics)
+
+6-14-2019 plan:
+ - learn all of konva
+ - build the toolbar with draggable elements
+ - research how to make "port" between nodes, might have to consider using d3

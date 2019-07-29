@@ -1,0 +1,5 @@
+div.ui.HomeNav.menu {
+  background: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  margin-top: 0rem !important;
+}

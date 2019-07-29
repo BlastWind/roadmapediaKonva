@@ -1,0 +1,9 @@
+div#contentWrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+
+div#profileWrapper{
+margin-left: -7rem;
+float: left;
+}
