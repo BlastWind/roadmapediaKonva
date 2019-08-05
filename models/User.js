@@ -25,11 +25,22 @@ const UserSchema = new Schema({
   },
   savedRoadmap: {
     type: Object,
-    default: []
+    default: [],
+    required: true
   },
   draftRoadmap: {
     type: Object,
-    default: []
+    default: [],
+    required: true
+  },
+  yourRoadmap: {
+    type: Object,
+    default: [],
+    required: true
+  },
+  userDescription: {
+    type: String,
+    default: "This author has no description yet"
   }
 });
 module.exports = User = mongoose.model("users", UserSchema);

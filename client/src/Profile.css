@@ -1,9 +1,4 @@
-div#contentWrapper {
-  margin: 0 auto;
-  width: 70%;
-}
+span#userDescriptionSpan {
+  display: block;
 
-div#profileWrapper{
-margin-left: -7rem;
-float: left;
 }

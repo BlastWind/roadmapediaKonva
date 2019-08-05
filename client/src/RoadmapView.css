@@ -1,32 +1,42 @@
 div.ui.segments.roadmapFloatShow {
-  position: absolute;
-  top: 2.45rem;
-  right: -15rem;
-  width: 15rem;
-  transition: right, background;
-  transition-duration: 1.5s;
+    position: absolute;
+    top: 11rem;
+    right: -15rem;
+    width: 15rem;
+    transition: right, background;
+    transition-duration: 1.5s;
 }
 
 div.ui.segments.roadmapFloatHide {
-  position: absolute;
-  right: 0rem;
-  transition: right, background;
-  transition-duration: 1.5s;
+    position: absolute;
+    right: 0rem;
+    transition: right, background;
+    transition-duration: 1.5s;
 }
 
 div.hide {
-  position: absolute;
-  right: 13.5rem;
-  transition: right, color, transform;
-  transition-duration: 1.5s;
-  color: grey;
-  transform: rotateY(180deg);
+    position: absolute;
+    top: 22rem;
+    right: 13.5rem;
+    transition: right, color, transform;
+    transition-duration: 1.5s;
+    color: grey;
+    transform: rotateY(180deg);
 }
 
 div.show {
-  position: absolute;
-  right: 0rem;
-  color: black;
-  transition: right, color, transform;
-  transition-duration: 1.5s;
+    top: 22rem;
+    position: absolute;
+    right: 0rem;
+    color: black;
+    transition: right, color, transform;
+    transition-duration: 1.5s;
+}
+i#centerIcon {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }

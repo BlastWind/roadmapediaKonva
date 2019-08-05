@@ -1,0 +1,13 @@
+button.ui.button.discord {
+    background-color: #6e81cd;
+    color: #fff;
+    width: 80%;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.ui.fluid.button.discord:hover {
+    background-color: #3553cc;
+}

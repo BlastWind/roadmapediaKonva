@@ -1,36 +1,36 @@
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { setModalState } from "./actions/authActions";
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { setModalState } from './actions/authActions'
 
 const PrivateRoute = ({ component: Component, auth, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        auth.isAuthenticated === true ? (
-          <Component {...props} />
-        ) : (
-          <Redirect to={{ pathname: "/home" }} />
-        )
-      }
-      ref={props => {
-        if (!auth.isAuthenticated) {
-          if (props) props.props.setModalState(true);
-          //Component.setModalState(true);
-        }
-      }}
-    />
-  );
-};
+    return (
+        <Route
+            {...rest}
+            render={props =>
+                auth.isAuthenticated === true ? (
+                    <Component {...props} />
+                ) : (
+                    <Redirect to={{ pathname: '/home/featured' }} />
+                )
+            }
+            ref={props => {
+                if (!auth.isAuthenticated) {
+                    if (props) props.props.setModalState(true)
+                    //Component.setModalState(true);
+                }
+            }}
+        />
+    )
+}
 PrivateRoute.propTypes = {
-  auth: PropTypes.object.isRequired
-};
+    auth: PropTypes.object.isRequired
+}
 const mapStateToProps = state => ({
-  auth: state.auth
-});
+    auth: state.auth
+})
 export default connect(
-  mapStateToProps,
-  { setModalState }
-)(PrivateRoute);
+    mapStateToProps,
+    { setModalState }
+)(PrivateRoute)

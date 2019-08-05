@@ -1,19 +1,19 @@
-import { SET_MODAL_STATE } from "../actions/types";
+import { SET_MODAL_STATE } from '../actions/types'
 
 const initialState = {
-  open: false
-};
+    open: false
+}
 
 //3 rergistrationStatus: notRegistering, registeration Loading, registeration completed
 
 export default function(state = initialState, action) {
-  switch (action.type) {
+    switch (action.type) {
     case SET_MODAL_STATE:
-      return {
-        open: action.payload
-      };
+        return {
+            open: action.payload
+        }
 
     default:
-      return state;
-  }
+        return state
+    }
 }

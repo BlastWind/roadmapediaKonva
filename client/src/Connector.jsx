@@ -48,13 +48,13 @@ class Connector extends Component {
         from.attrs.name.includes("text")
       ) {
         //only works for rect because the calculation for origin is different for ellipse and rect
-        var dy =
+        dy =
           to.attrs.y +
           to.attrs.height / 2 -
           (from.attrs.y + from.textHeight / 2);
-        var dx =
+        dx =
           to.attrs.x + to.attrs.width / 2 - (from.attrs.x + from.textWidth / 2);
-        var theta = Math.atan2(dy, dx);
+         theta = Math.atan2(dy, dx);
         let angle = (theta / Math.PI) * 180;
 
         if (angle <= 45 && angle >= -45) {
@@ -94,9 +94,9 @@ class Connector extends Component {
         to.attrs.name.includes("star") &&
         from.attrs.name.includes("star")
       ) {
-        var origin = { x: from.attrs.x, y: from.attrs.y };
-        const dy = points[3] - points[1];
-        const dx = points[2] - points[0];
+        origin = { x: from.attrs.x, y: from.attrs.y };
+         dy = points[3] - points[1];
+       dx = points[2] - points[0];
         let angle = Math.atan2(-dy, dx);
         points[0] += -from.attrs.outerRadius * Math.cos(angle + Math.PI);
         points[1] += from.attrs.outerRadius * Math.sin(angle + Math.PI);
@@ -106,11 +106,11 @@ class Connector extends Component {
         to.attrs.name.includes("text") &&
         from.attrs.name.includes("text")
       ) {
-        var dy =
+       dy =
           to.attrs.y + to.textHeight / 2 - (from.attrs.y + from.textHeight / 2);
-        var dx =
+      dx =
           to.attrs.x + to.textWidth / 2 - (from.attrs.x + from.textWidth / 2);
-        var theta = Math.atan2(dy, dx);
+       theta = Math.atan2(dy, dx);
         let angle = (theta / Math.PI) * 180;
 
         if (angle <= 45 && angle >= -45) {
@@ -141,7 +141,7 @@ class Connector extends Component {
         var dy1 = to.attrs.y + -(from.attrs.y + from.attrs.height / 2);
         var dx1 = to.attrs.x + -(from.attrs.x + from.attrs.width / 2);
 
-        var theta = Math.atan2(dy1, dx1);
+     theta = Math.atan2(dy1, dx1);
         var angle = (theta / Math.PI) * 180;
         if (angle <= -45 && angle >= -135) {
           //top
@@ -173,11 +173,11 @@ class Connector extends Component {
         to.attrs.name.includes("star")
       ) {
         //rect change
-        var dy1 = to.attrs.y + -(from.attrs.y + from.attrs.height / 2);
-        var dx1 = to.attrs.x + -(from.attrs.x + from.attrs.width / 2);
+       dy1 = to.attrs.y + -(from.attrs.y + from.attrs.height / 2);
+     dx1 = to.attrs.x + -(from.attrs.x + from.attrs.width / 2);
 
-        var theta = Math.atan2(dy1, dx1);
-        var angle = (theta / Math.PI) * 180;
+       theta = Math.atan2(dy1, dx1);
+     angle = (theta / Math.PI) * 180;
         if (angle <= -45 && angle >= -135) {
           //top
           points[0] += from.attrs.width / 2;
@@ -208,13 +208,13 @@ class Connector extends Component {
         to.attrs.name.includes("text")
       ) {
         //only works for rect because the calculation for origin is different for ellipse and rect
-        var dy =
+       dy =
           to.attrs.y +
           to.textHeight / 2 -
           (from.attrs.y + from.attrs.height / 2);
-        var dx =
+    dx =
           to.attrs.x + to.textWidth / 2 - (from.attrs.x + from.attrs.width / 2);
-        var theta = Math.atan2(dy, dx);
+      theta = Math.atan2(dy, dx);
         let angle = (theta / Math.PI) * 180;
 
         if (angle <= 45 && angle >= -45) {
@@ -242,11 +242,11 @@ class Connector extends Component {
         to.attrs.name.includes("rect")
       ) {
         //rect change
-        var dy1 = to.attrs.y + to.attrs.height / 2 - from.attrs.y;
-        var dx1 = to.attrs.x + to.attrs.width / 2 - from.attrs.x;
+      dy1 = to.attrs.y + to.attrs.height / 2 - from.attrs.y;
+    dx1 = to.attrs.x + to.attrs.width / 2 - from.attrs.x;
 
-        var theta = Math.atan2(dy1, dx1);
-        var angle = (theta / Math.PI) * 180;
+       theta = Math.atan2(dy1, dx1);
+       angle = (theta / Math.PI) * 180;
 
         if (angle <= -45 && angle >= -135) {
           //top
@@ -278,11 +278,11 @@ class Connector extends Component {
         to.attrs.name.includes("text")
       ) {
         //rect change
-        var dy1 = to.attrs.y + to.textHeight / 2 - from.attrs.y;
-        var dx1 = to.attrs.x + to.textWidth / 2 - from.attrs.x;
+       dy1 = to.attrs.y + to.textHeight / 2 - from.attrs.y;
+       dx1 = to.attrs.x + to.textWidth / 2 - from.attrs.x;
 
-        var theta = Math.atan2(dy1, dx1);
-        var angle = (theta / Math.PI) * 180;
+    theta = Math.atan2(dy1, dx1);
+     angle = (theta / Math.PI) * 180;
 
         if (angle <= -45 && angle >= -135) {
           //top
@@ -314,7 +314,7 @@ class Connector extends Component {
         to.attrs.name.includes("star")
       ) {
         //two ellipses
-        var origin = { x: from.attrs.x, y: from.attrs.y };
+       origin = { x: from.attrs.x, y: from.attrs.y };
         const dy = points[3] - points[1];
         const dx = points[2] - points[0];
         let angle = Math.atan2(-dy, dx);
@@ -327,7 +327,7 @@ class Connector extends Component {
         to.attrs.name.includes("ellipse")
       ) {
         //two ellipses
-        var origin = { x: from.attrs.x, y: from.attrs.y };
+     origin = { x: from.attrs.x, y: from.attrs.y };
         const dy = points[3] - points[1];
         const dx = points[2] - points[0];
         let angle = Math.atan2(-dy, dx);
@@ -340,11 +340,11 @@ class Connector extends Component {
         to.attrs.name.includes("rect")
       ) {
         //two ellipses
-        var dy1 = to.attrs.y + to.attrs.width / 2 - from.attrs.y;
-        var dx1 = to.attrs.x + to.attrs.width / 2 - from.attrs.x;
+     dy1 = to.attrs.y + to.attrs.width / 2 - from.attrs.y;
+   dx1 = to.attrs.x + to.attrs.width / 2 - from.attrs.x;
 
-        var theta = Math.atan2(dy1, dx1);
-        var angle = (theta / Math.PI) * 180;
+    theta = Math.atan2(dy1, dx1);
+       angle = (theta / Math.PI) * 180;
 
         if (angle <= -45 && angle >= -135) {
           //top
@@ -376,11 +376,11 @@ class Connector extends Component {
         to.attrs.name.includes("text")
       ) {
         //two ellipses
-        var dy1 = to.attrs.y + to.textHeight / 2 - from.attrs.y;
-        var dx1 = to.attrs.x + to.textWidth / 2 - from.attrs.x;
+       dy1 = to.attrs.y + to.textHeight / 2 - from.attrs.y;
+     dx1 = to.attrs.x + to.textWidth / 2 - from.attrs.x;
 
-        var theta = Math.atan2(dy1, dx1);
-        var angle = (theta / Math.PI) * 180;
+       theta = Math.atan2(dy1, dx1);
+     angle = (theta / Math.PI) * 180;
 
         if (angle <= -45 && angle >= -135) {
           //top
@@ -412,11 +412,11 @@ class Connector extends Component {
         to.attrs.name.includes("star")
       ) {
         //rect change
-        var dy1 = to.attrs.y + -(from.attrs.y + from.textHeight / 2);
-        var dx1 = to.attrs.x + -(from.attrs.x + from.textWidth / 2);
+     dy1 = to.attrs.y + -(from.attrs.y + from.textHeight / 2);
+    dx1 = to.attrs.x + -(from.attrs.x + from.textWidth / 2);
 
-        var theta = Math.atan2(dy1, dx1);
-        var angle = (theta / Math.PI) * 180;
+     theta = Math.atan2(dy1, dx1);
+    angle = (theta / Math.PI) * 180;
         if (angle <= -45 && angle >= -135) {
           //top
           points[0] += from.textWidth / 2;
@@ -447,11 +447,11 @@ class Connector extends Component {
         to.attrs.name.includes("ellipse")
       ) {
         //rect change
-        var dy1 = to.attrs.y + -(from.attrs.y + from.textHeight / 2);
-        var dx1 = to.attrs.x + -(from.attrs.x + from.textWidth / 2);
+     dy1 = to.attrs.y + -(from.attrs.y + from.textHeight / 2);
+       dx1 = to.attrs.x + -(from.attrs.x + from.textWidth / 2);
 
-        var theta = Math.atan2(dy1, dx1);
-        var angle = (theta / Math.PI) * 180;
+      theta = Math.atan2(dy1, dx1);
+   angle = (theta / Math.PI) * 180;
         if (angle <= -45 && angle >= -135) {
           //top
           points[0] += from.textWidth / 2;
@@ -482,14 +482,14 @@ class Connector extends Component {
 
     if (stuff.type === "onlyFrom") {
       if (from.attrs.name.includes("rect")) {
-        var origin = {
+      origin = {
           x: from.attrs.x + from.attrs.width / 2,
           y: from.attrs.y + from.attrs.height / 2
         };
-        var dy = point.y - origin.y;
-        var dx = point.x - origin.x;
-        var theta = Math.atan2(dy, dx);
-        var angle = (theta / Math.PI) * 180;
+     dy = point.y - origin.y;
+     dx = point.x - origin.x;
+      theta = Math.atan2(dy, dx);
+      angle = (theta / Math.PI) * 180;
         if (angle <= -45 && angle >= -135) {
           //top
           points[0] += from.attrs.width / 2;
@@ -508,7 +508,7 @@ class Connector extends Component {
           points[1] += from.attrs.height / 2;
         }
       } else if (from.attrs.name.includes("ellipse")) {
-        var origin = {
+      origin = {
           x: from.attrs.x,
           y: from.attrs.y
         };
@@ -522,7 +522,7 @@ class Connector extends Component {
         points[0] += -from.attrs.radiusX * Math.cos(angle + Math.PI);
         points[1] += from.attrs.radiusY * Math.sin(angle + Math.PI);
       } else if (from.attrs.name.includes("star")) {
-        var origin = { x: from.attrs.x, y: from.attrs.y };
+      origin = { x: from.attrs.x, y: from.attrs.y };
         const dy = points[3] - points[1];
         const dx = points[2] - points[0];
         let angle = Math.atan2(-dy, dx);
@@ -532,14 +532,14 @@ class Connector extends Component {
         points[0] += -from.attrs.outerRadius * Math.cos(angle + Math.PI);
         points[1] += from.attrs.outerRadius * Math.sin(angle + Math.PI);
       } else if (from.attrs.name.includes("text")) {
-        var origin = {
+         origin = {
           x: from.attrs.x + from.textWidth / 2,
           y: from.attrs.y + from.textWidth / 2
         };
-        var dy = point.y - origin.y;
-        var dx = point.x - origin.x;
-        var theta = Math.atan2(dy, dx);
-        var angle = (theta / Math.PI) * 180;
+     dy = point.y - origin.y;
+  dx = point.x - origin.x;
+       theta = Math.atan2(dy, dx);
+     angle = (theta / Math.PI) * 180;
 
         if (angle <= -45 && angle >= -135) {
           //top
@@ -563,15 +563,15 @@ class Connector extends Component {
     if (stuff.type === "onlyTo") {
       if (to.attrs.name.includes("rect")) {
         var endPoint = { x: points[0], y: points[1] };
-        var origin = {
+         origin = {
           x: to.attrs.x + to.attrs.width / 2,
           y: to.attrs.y + to.attrs.height / 2
         };
 
-        var dy = endPoint.y - origin.y;
-        var dx = endPoint.x - origin.x;
-        var theta = Math.atan2(dy, dx);
-        var angle = (theta / Math.PI) * 180;
+         dy = endPoint.y - origin.y;
+       dx = endPoint.x - origin.x;
+      theta = Math.atan2(dy, dx);
+      angle = (theta / Math.PI) * 180;
 
         if (angle > 45 && angle < 135) {
           points[2] += to.attrs.width / 2;
@@ -604,16 +604,16 @@ class Connector extends Component {
         points[2] += to.attrs.outerRadius * Math.cos(angle + Math.PI);
         points[3] -= to.attrs.outerRadius * Math.sin(angle + Math.PI);
       } else if (to.attrs.name.includes("text")) {
-        var endPoint = { x: points[0], y: points[1] };
-        var origin = {
+       endPoint = { x: points[0], y: points[1] };
+     origin = {
           x: to.attrs.x + to.textWidth / 2,
           y: to.attrs.y + to.textWidth / 2
         };
 
-        var dy = endPoint.y - origin.y;
-        var dx = endPoint.x - origin.x;
-        var theta = Math.atan2(dy, dx);
-        var angle = (theta / Math.PI) * 180;
+     dy = endPoint.y - origin.y;
+       dx = endPoint.x - origin.x;
+     theta = Math.atan2(dy, dx);
+       angle = (theta / Math.PI) * 180;
 
         if (angle > 45 && angle < 135) {
           points[2] += to.textWidth / 2;
@@ -636,7 +636,7 @@ class Connector extends Component {
   };
 
   render() {
-    const fromShape = this.props.from;
+
 
     var points = null;
 
@@ -658,7 +658,7 @@ class Connector extends Component {
         points = this.getConnectorPoints(stuff);
       }
     }
-    if (this.props.current == false) {
+    if (this.props.current === false) {
       if (this.props.from && this.props.to) {
         points = [
           this.props.from.attrs.x,
@@ -715,8 +715,8 @@ class Connector extends Component {
       <Arrow
         name={this.props.name}
         points={points}
-        stroke="black"
-        fill="black"
+
+
         strokeWidth={1.5}
         stroke={this.props.stroke}
         fill={this.props.fill}

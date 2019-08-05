@@ -1,54 +1,63 @@
 div.ui.borderless.navbar.menu {
-  background: linear-gradient(90deg, #00c4cc, #7d2ae8);
-  border-radius: 0rem !important;
-  border: none !important;
+    background: linear-gradient(90deg, #00c4cc, #7d2ae8);
+    border-radius: 0rem !important;
+    border: none !important;
 }
 
 div.item.publish {
-  padding: 0.5rem !important;
+    padding: 0.5rem !important;
 }
 
 div.item.save {
-  padding-right: 0rem !important;
+    padding-right: 0rem !important;
 }
 
 div.errMsg {
-  position: absolute;
-  top: 5rem;
-  text-align: center;
-  width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+    position: absolute;
+    top: 5rem;
+    text-align: center;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 div.errMsginner {
-  display: inline-block;
-  margin: 0 auto;
+    display: inline-block;
+    margin: 0 auto;
 
-  background-color: orange;
-  color: white !important;
-  padding: 0.5rem;
-  border-radius: 1rem;
+    background-color: orange;
+    color: white !important;
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
 div.ui.modal.transition.visible.active {
-  min-width: 75% !important;
-
-  padding-bottom: 1.25rem !important;
+    min-width: 75% !important;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
 }
 
 button#publishButton {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80% !important;
-  margin-top: 1.25rem;
-  color: white;
-  background: rgb(90, 174, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(90, 174, 255, 1) 0%,
-    rgba(140, 151, 255, 1) 25%,
-    rgba(189, 130, 255, 1) 51%,
-    rgba(237, 117, 214, 1) 76%,
-    rgba(255, 113, 192, 1) 100%
-  );
+    margin-left: auto;
+    margin-right: auto;
+    width: 80% !important;
+    margin-top: 1.25rem;
+    color: white;
+    background: rgb(90, 174, 255);
+    background: linear-gradient(
+        90deg,
+        rgba(90, 174, 255, 1) 0%,
+        rgba(140, 151, 255, 1) 25%,
+        rgba(189, 130, 255, 1) 51%,
+        rgba(237, 117, 214, 1) 76%,
+        rgba(255, 113, 192, 1) 100%
+    );
+}
+
+button#publishingButton {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80% !important;
+    margin-top: 1.25rem;
+    color: white;
+    background-color: grey;
 }
